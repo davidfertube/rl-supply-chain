@@ -1,6 +1,6 @@
 ---
 title: RL Supply Chain
-emoji: 📦
+emoji: ⚡
 colorFrom: green
 colorTo: purple
 sdk: streamlit
@@ -15,7 +15,7 @@ tags:
   - ppo
 ---
 
-# RL Supply Chain 📦
+# RL Supply Chain ⚡
 
 **Reinforcement Learning for Supply Chain Optimization**
 
