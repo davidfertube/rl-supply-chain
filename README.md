@@ -1,6 +1,6 @@
 ---
 title: RL Supply Chain
-emoji: ⚡
+emoji: 
 colorFrom: green
 colorTo: purple
 sdk: streamlit
@@ -15,11 +15,11 @@ tags:
   - ppo
 ---
 
-# RL Supply Chain ⚡
+# RL Supply Chain 
 
 **Reinforcement Learning for Supply Chain Optimization**
 
-## 🎯 Purpose
+##  Purpose
 
 Optimize inventory management using Proximal Policy Optimization (PPO):
 - Minimize holding costs
@@ -27,13 +27,13 @@ Optimize inventory management using Proximal Policy Optimization (PPO):
 - Optimize order quantities
 - Handle demand uncertainty
 
-## 🤖 Model
+##  Model
 
 - **Algorithm**: PPO (Stable-Baselines3)
 - **State**: Inventory levels, demand forecast, lead time
 - **Action**: Order quantity
 - **Reward**: Negative cost (holding + stockout + ordering)
 
-## 👤 Author
+##  Author
 
 **David Fernandez** | Industrial AI Engineer

@@ -18,7 +18,7 @@ import plotly.graph_objects as go
 
 st.set_page_config(
     page_title="RL Supply Chain",
-    page_icon="📦",
+    page_icon="",
     layout="wide"
 )
 
@@ -140,14 +140,14 @@ with st.sidebar:
     st.title("RL Supply Chain")
     st.markdown("---")
     
-    st.subheader("⚙️ Environment Settings")
+    st.subheader("️ Environment Settings")
     holding_cost = st.slider("Holding Cost ($/unit/day)", 0.5, 5.0, 1.0)
     stockout_cost = st.slider("Stockout Cost ($/unit)", 5.0, 50.0, 10.0)
     lead_time = st.slider("Lead Time (days)", 1, 5, 2)
     
     st.markdown("---")
     
-    st.subheader("📊 Policy Settings")
+    st.subheader(" Policy Settings")
     policy_type = st.radio("Select Policy", ["Simple (s,Q)", "RL-Optimized"])
     
     if policy_type == "Simple (s,Q)":
@@ -159,11 +159,11 @@ with st.sidebar:
 # MAIN CONTENT
 # ============================================
 
-st.title("📦 RL Supply Chain Optimizer")
+st.title(" RL Supply Chain Optimizer")
 st.markdown("### Reinforcement Learning for Inventory Management")
 
 # Run simulation button
-if st.button("🚀 Run Simulation (50 days)", type="primary"):
+if st.button(" Run Simulation (50 days)", type="primary"):
     
     # Create environment
     env = SupplyChainEnv(
@@ -205,7 +205,7 @@ if st.button("🚀 Run Simulation (50 days)", type="primary"):
         st.metric("Service Level", f"{service_level:.1%}")
     
     # Inventory plot
-    st.subheader("📈 Inventory Levels Over Time")
+    st.subheader(" Inventory Levels Over Time")
     
     fig = go.Figure()
     
@@ -245,7 +245,7 @@ if st.button("🚀 Run Simulation (50 days)", type="primary"):
     col1, col2 = st.columns(2)
     
     with col1:
-        st.subheader("💰 Daily Costs")
+        st.subheader(" Daily Costs")
         
         fig_cost = go.Figure()
         fig_cost.add_trace(go.Scatter(
@@ -259,7 +259,7 @@ if st.button("🚀 Run Simulation (50 days)", type="primary"):
         st.plotly_chart(fig_cost, use_container_width=True)
     
     with col2:
-        st.subheader("📊 Cost Breakdown")
+        st.subheader(" Cost Breakdown")
         
         total_holding = (df["inventory"] * holding_cost).sum()
         total_stockout = (df["stockout"] * stockout_cost).sum()
@@ -273,12 +273,12 @@ if st.button("🚀 Run Simulation (50 days)", type="primary"):
         st.plotly_chart(fig_pie, use_container_width=True)
     
     # Data table
-    with st.expander("📋 View Raw Data"):
+    with st.expander(" View Raw Data"):
         st.dataframe(df)
 
 else:
     # Show intro
-    st.info("👆 Click 'Run Simulation' to optimize inventory with RL")
+    st.info(" Click 'Run Simulation' to optimize inventory with RL")
     
     st.markdown("""
     ### How It Works
