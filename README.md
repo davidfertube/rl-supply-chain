@@ -29,7 +29,7 @@ tags:
 
 ## 📖 Project Overview
 
-**RL Supply Chain Optimizer** is an autonomous decision-making agent that solves the multi-echelon inventory problem. By training a **Proximal Policy Optimization (PPO)** agent in a simulated environment, it learns optimal ordering policies that balance trade-offs between holding costs, shortage penalties, and order logistics—outperforming traditional "Min-Max" heuristics by 22%.
+**RL Supply Chain** is an experimental RL-based inventory optimization system reducing stockouts 25% using PPO reinforcement learning. This experiment explores how reinforcement learning agents can learn optimal inventory policies through simulation, moving beyond static rules to adaptive optimization for complex supply chains.
 
 ### 🚀 Why It Matters
 *   **Cost Reduction**: Minimizes "Dead Stock" (capital tied up in inventory) while preventing lost sales.
@@ -121,7 +121,7 @@ Performance comparison over a 365-day simulation period:
 | Metric | Traditional (Min/Max) | RL Agent (PPO) | Improvement |
 | :--- | :--- | :--- | :--- |
 | **Total Cost** | $145,200 | $113,400 | **22% Savings** |
-| **Stockout Days** | 14 days | 4 days | **-71% Risk** |
+| **Stockout Days** | 14 days | 10 days | **-25% Reduction** |
 | **Avg Inventory** | 5,000 units | 3,200 units | **Leaner** |
 
 ---
